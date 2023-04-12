@@ -1,0 +1,17 @@
+  <div class="container">
+        <main class="form-signin">
+            <form [formGroup]="createTask" (ngSubmit)="createNewTask()">
+              <h1 class="h3 mb-3 fw-normal">Create Task</h1>
+          
+              <div class="form-floating">
+                <input formControlName="name" type="name" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput"> Name</label>
+              </div>
+              <div class="form-floating">
+                <input formControlName="description" type="description" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Description</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Create</button>
+            </form>
+          </main>
+  </div>

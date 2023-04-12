@@ -1,0 +1,32 @@
+<div class="container">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <h1 class="h3 mb-3 fw-normal">Register</h1>
+              <div class="row">
+                <div class="col">
+                    <input formControlName="pseudo" type="pseudo" class="form-control" id="floatingInput" placeholder="Pseudo">
+                    <label for="floatingInput"> Pseudo</label>
+                </div>
+                <div class="col">
+                    <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="Your Email">
+                    <label for="floatingInput">Email address</label>
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="col">
+                    <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+
+                  <div class="col">
+                    <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
+                    <label for="floatingPassword">Confirm Password</label>
+                  </div>
+              </div>
+
+              <div class="mt-4 pt-2">
+                <button class="btn btn-primary btn-lg" type="submit">Register</button>
+              </div>
+              
+            </form>  
+</div>
