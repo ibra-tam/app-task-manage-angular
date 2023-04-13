@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatTabContent } from '@angular/material/tabs';
+
 import { Observable, Subscription } from 'rxjs';
 import { CreateTaskComponent } from '../crud-task/create-task/create-task.component';
 import { DeleteTaskComponent } from '../crud-task/delete-task/delete-task.component';
 import { UpdateTaskComponent } from '../crud-task/update-task/update-task.component';
 import { ITask } from '../models/task';
 import { TaskService } from '../services/task.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
 
 
 
