@@ -21,5 +21,6 @@ export class DeleteTaskComponent implements OnInit {
 
   deleteTask(): void {
       this.taskService.deleteTask(this.data.id).catch(console.error);
+      this.dialogRef.close();
   }
 }

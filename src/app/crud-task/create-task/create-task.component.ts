@@ -1,3 +1,4 @@
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
@@ -13,7 +14,7 @@ export class CreateTaskComponent implements OnInit {
   public createTask! : FormGroup;
 
 
-  constructor( private taskService: TaskService, private fb: FormBuilder ) { }
+  constructor( private taskService: TaskService, private fb: FormBuilder,private dialog: MatDialog ) { }
 
   ngOnInit(): void {
     this.createTaskForm();
@@ -22,12 +23,14 @@ export class CreateTaskComponent implements OnInit {
   createTaskForm() {
     this.createTask = new FormGroup({
       name: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
+      description: new FormControl('', Validators.required),
+      status: new FormControl(0, Validators.required),
     });
   }
 
 
     createNewTask() : void{
+      this.dialog.closeAll();
       this.taskService.createTask(this.createTask.value).then(task => {(task)
       }, (error: any) => {
         console.log(error);

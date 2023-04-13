@@ -22,13 +22,15 @@ export class UpdateTaskComponent implements OnInit {
 
   updateTaskForm() {
     this.updateTask = new FormGroup({
-      name: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required)
+      name: new FormControl(this.data.name, Validators.required),
+      description: new FormControl(this.data.description, Validators.required),
+     
   });
   }
 
 
     UpdateTask() : void{
+      this.dialogRef.close();
       this.taskService.editTask(this.updateTask.value, this.data.id).then(task => {(task)
       }, (error: any) => {
         console.log(error);

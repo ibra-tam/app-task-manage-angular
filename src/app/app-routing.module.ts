@@ -6,7 +6,6 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'dashbord', component: DashbordComponent},
-  ///{path: 'createTask', component: CreateTaskComponent},
   {path: 'account', loadChildren:() => import('./account/account.module').then(mod => mod.AccountModule)}
 ];
 

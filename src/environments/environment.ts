@@ -4,16 +4,15 @@
 
 export const environment = {
   production: false,
-    fireConfig : {
-    apiKey: "xxxxxxxxxxxxxx",
-    authDomain: "xxxxxxxxxxxxxx",
-    databaseURL: "xxxxxxxxxxxxxx",  
-    projectId: "xxxxxxxxxxxxxx",
-    storageBucket: "xxxxxxxxxxxxxx",
-    messagingSenderId: "xxxxxxxxxxxxxx",
-    appId: "1:1089793154622:web:9b867ec301fd8d02363b6f",
-    measurementId: "G-HCYVZ9ZDXT"
-  }, 
+  fireConfig: {
+    apiKey: "AIzaSyDsUlMvFhbUWvB0uNbeulQpZwRrQmELvQE",
+    authDomain: "task-manager-angular-9390b.firebaseapp.com",
+    databaseURL: "https://task-manager-angular-9390b-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "task-manager-angular-9390b",
+    storageBucket: "task-manager-angular-9390b.appspot.com",
+    messagingSenderId: "698490902053",
+    appId: "1:698490902053:web:8a04eed6a162ccc94991cc" ,
+  },
 };
 
 /*

@@ -6,7 +6,7 @@
 <div class="container">
     <mat-tab-group>
        <!-- Task No Started -->
-        <mat-tab label="No start">
+        <mat-tab label="Plannifié">
             <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -52,7 +52,7 @@
         <!-- Task In Progress We can just finish it but don't remove or edit  -->
 
 
-        <mat-tab label="In Process">
+        <mat-tab label="En cours">
             <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
 
 
@@ -88,7 +88,7 @@
 
                 <!-- Task Close We Remove That -->
 
-        <mat-tab label="Closes">
+        <mat-tab label="Terminé">
             <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
 
 

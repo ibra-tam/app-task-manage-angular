@@ -39,14 +39,21 @@ export class DashbordComponent implements OnInit {
 }
 
   addNewTask() {
-    this.dialog.open(CreateTaskComponent);
+    this.dialog.open(CreateTaskComponent,
+      {
+        width: '500px',
+        height: '300px'
+      }
+      );
     this.dialog.afterAllClosed.subscribe((data) => 
     this.taskService.getAllTask());
   }
 
   editTask(task:any) {
     this.dialog.open(UpdateTaskComponent, {
-      data: {id: task.id, name: task.name, description: task.description}
+      data: {id: task.id, name: task.name, description: task.description},
+      width: '400px',
+      height: '300px'
     });
     this.dialog.afterAllClosed.subscribe((data) => 
     this.taskService.getAllTask());
@@ -55,6 +62,8 @@ export class DashbordComponent implements OnInit {
   deleteTask(task:any) {
     this.dialog.open(DeleteTaskComponent, {
       data: {id: task.id},
+      width: '350px',
+      height: '150px'
     });
 
     this.dialog.afterAllClosed.subscribe((data) => 
