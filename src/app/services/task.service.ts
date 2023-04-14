@@ -12,10 +12,6 @@ export class TaskService {
   private tasks : ITask[] = [];
   public  taskSubject : BehaviorSubject<ITask[]> = new BehaviorSubject(<ITask[]>[]);
 
-
-  
-  //apiUrl = environment.fireConfig;
-
   constructor( private database: AngularFireDatabase) { 
     this.getAllTask();
   }
@@ -28,7 +24,7 @@ export class TaskService {
   getAllTask(): void {
     this.database.list('tasks').query.limitToLast(10).once('value', snapShop => {
       const taskSnapshot = snapShop.val();
-      const mapToTask = Object.keys(taskSnapshot).map(id => ({id, ...taskSnapshot[id]}));
+      const mapToTask = Object.keys(taskSnapshot)?.map(id => ({id, ...taskSnapshot[id]}));
       this.tasks = mapToTask;
       this.taskRefresh();
     });

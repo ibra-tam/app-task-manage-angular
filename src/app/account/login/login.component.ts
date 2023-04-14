@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   onSubmitLogin() {
     this.accountService.login(this.loginForm.value.email, this.loginForm.value.password).then((user) => {
       console.log('user is connected', user);
-      this.router.navigate(['dashbord']);
+      this.router.navigate(['dashboard'])
     }).catch(console.error);
 
   }

@@ -15,11 +15,15 @@ export class AuthService {
 
   public currentUser = new BehaviorSubject<User | null>(null);
 
-  //currentUser$ = this.currentUserSource.asObservable();
+  currentUser$ = this.currentUser.asObservable();
+  public currentUserOnLocalStorage!: User;
 
   constructor(private auth_: AngularFireAuth) { 
     this.auth_.onAuthStateChanged(user => {
       this.currentUser.next(user);
+      user?.getIdToken().then(token => {
+        localStorage.setItem('token', token);
+    })
     }, console.error);
   }
 
@@ -33,8 +37,15 @@ export class AuthService {
   }
 
   login(email: string, password: string): Promise<any> {
+    console.log('login here');
     return new Promise((resolve, reject) => {
-      this.auth_.signInWithEmailAndPassword(email, password).then(resolve).catch(reject);
+      this.auth_.signInWithEmailAndPassword(email, password).then(
+        user => {
+          resolve(user);
+         user.user?.getIdToken().then(token => {
+            localStorage.setItem('token', token);
+        })
+      }).catch(reject);
     });
 }
 
@@ -42,6 +53,8 @@ export class AuthService {
     return new Promise((resolve, reject) => {
       this.auth_.signOut().then(() => {
         this.currentUser.next(null);
+        localStorage.removeItem('token');
+        this
         resolve();
       }).catch(reject);
     });

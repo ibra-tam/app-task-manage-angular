@@ -17,15 +17,17 @@ export class NavBarComponent implements OnInit, OnDestroy{
   constructor(private auth_: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    this.currentUserSubscription = this.auth_.currentUser.subscribe({
-      next: user => this.currentUser = <User>user,
-      error:console.error
+    this.currentUserSubscription = this.auth_.currentUser$.subscribe({
+      next: (user) => {
+        this.currentUser = user as User;
+        console.log( 'this.currentUser login',this.currentUser);
+      }
     });
   }
 
   logout(): void {
     this.auth_.logout().then(() => {
-      this.router.navigate(['account/login']);
+      this.router.navigateByUrl('/account/login');
     }).catch(console.error);
   }
 

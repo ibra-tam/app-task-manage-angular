@@ -40,8 +40,7 @@ export class RegisterComponent implements OnInit {
     onSubmit() : void{
       this.accountService.register(this.registerForm.value.email, this.registerForm.value.password).then(user => {
         if(user)
-        console.log('registered user', user);
-        this.router.navigate(['/account', 'login']);
+        this.router.navigateByUrl('/dashboard');
       }, (error: any) => {
         console.log(error);
       });
