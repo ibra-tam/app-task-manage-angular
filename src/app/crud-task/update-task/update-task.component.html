@@ -1,7 +1,7 @@
 <div class="container">
        <div class="row">
             <form [formGroup]="updateTask" (ngSubmit)="UpdateTask()">
-              <h4> Edition de la mission</h4>
+              <h4 class="text-center mt-2"> Edition de la mission</h4>
           
               <div class="col-sm-6">
                 <input formControlName="name" type="name" class="form-control" id="floatingInput" placeholder="Ex:Changement pneus">
@@ -11,6 +11,18 @@
                 <label for="floatingInput">Description</label>
                 <input formControlName="description" type="name" class="form-control" id="floatingInput" placeholder="description">
               </div>
+              <div class="col-sm-6 mt-4">
+                <mat-form-field appearance="outline">
+                  <mat-label>Statut</mat-label>
+                  <mat-select formControlName="status">
+                    <mat-option *ngFor="let state of status" [value]="state.value">
+                      {{ state.viewValue }}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </div>
+       
               <button class="btn btn-primary button-customer mt-2" type="submit">Editer</button>
             </form>
           </div>

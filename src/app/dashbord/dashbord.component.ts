@@ -42,7 +42,7 @@ export class DashbordComponent implements OnInit {
     this.dialog.open(CreateTaskComponent,
       {
         width: '500px',
-        height: '300px'
+        height: '320px'
       }
       );
     this.dialog.afterAllClosed.subscribe((data) => 
@@ -53,7 +53,7 @@ export class DashbordComponent implements OnInit {
     this.dialog.open(UpdateTaskComponent, {
       data: {id: task.id, name: task.name, description: task.description},
       width: '400px',
-      height: '300px'
+      height: '320px'
     });
     this.dialog.afterAllClosed.subscribe((data) => 
     this.taskService.getAllTask());

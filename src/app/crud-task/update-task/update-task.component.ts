@@ -11,6 +11,11 @@ import { TaskService } from 'src/app/services/task.service';
 export class UpdateTaskComponent implements OnInit {
 
   public updateTask! : FormGroup;
+  public status = [
+    { value: 1, viewValue: 'Pannifier' },
+    { value: 2, viewValue: 'En cours' },
+    { value: 3, viewValue: 'Terminer' },
+  ];
 
   constructor( public dialogRef: MatDialogRef<UpdateTaskComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any, private taskService: TaskService) { }
@@ -24,6 +29,7 @@ export class UpdateTaskComponent implements OnInit {
     this.updateTask = new FormGroup({
       name: new FormControl(this.data.name, Validators.required),
       description: new FormControl(this.data.description, Validators.required),
+      status: new FormControl(this.data.status, Validators.required),
      
   });
   }

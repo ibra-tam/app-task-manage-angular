@@ -24,7 +24,10 @@ export class CreateTaskComponent implements OnInit {
     this.createTask = new FormGroup({
       name: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
-      status: new FormControl(0, Validators.required),
+      status: new FormControl(
+        { value: 'Pannifiée', disabled: true },
+        Validators.required
+      ),
     });
   }
 
