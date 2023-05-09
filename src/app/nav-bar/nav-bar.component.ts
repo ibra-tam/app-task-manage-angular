@@ -20,7 +20,6 @@ export class NavBarComponent implements OnInit, OnDestroy{
     this.currentUserSubscription = this.auth_.currentUser$.subscribe({
       next: (user) => {
         this.currentUser = user as User;
-        console.log( 'this.currentUser login',this.currentUser);
       }
     });
   }

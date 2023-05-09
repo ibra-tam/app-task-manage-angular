@@ -1,1 +1,17 @@
-<p>stat-task works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-primary button-customer mt-2" routerLink="/dashboard"> Retour à la liste des tâches</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="col-sm-6">
+           <h4 class="text-center mt-4"> Statistiques des tâches</h4>
+          <mat-card>
+            <mat-card-content *ngIf="htmlElementOfTask">
+              <canvas  class="task-chart" [id]="htmlElementOfTask"></canvas> 
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+</div>

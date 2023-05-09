@@ -11,10 +11,14 @@
       </ng-container>
   
       <ng-container *ngIf="currentUser">
-        <button mat-icon-button color="accent" matTooltip="Logout" (click)="logout()">
+        <button mat-icon-button color="accent" matTooltip="Statistique" routerLink="/statistic">
+          <mat-icon> pie_chart</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" matTooltip="Deconnexion" (click)="logout()">
           <mat-icon>exit_to_app</mat-icon>
         </button>
       </ng-container>
+      
   
     </div>
     

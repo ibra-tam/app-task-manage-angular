@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ITask } from '../models/task';
 
@@ -12,6 +12,8 @@ export class TaskService {
   private tasks : ITask[] = [];
   public  taskSubject : BehaviorSubject<ITask[]> = new BehaviorSubject(<ITask[]>[]);
 
+
+  
   constructor( private database: AngularFireDatabase) { 
     this.getAllTask();
   }
