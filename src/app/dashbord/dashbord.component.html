@@ -2,7 +2,7 @@
     <mat-tab-group>
        <!-- Task No Started -->
         <mat-tab label="Plannifié">
-            <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+            <table mat-table [dataSource]="taskPlanned" class="mat-elevation-z8">
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef> Name </th>
                     <td mat-cell *matCellDef="let task"> {{task.name}} </td>
@@ -48,7 +48,7 @@
 
 
         <mat-tab label="En cours">
-            <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+            <table mat-table [dataSource]="taskInProgress" class="mat-elevation-z8">
 
 
                 <ng-container matColumnDef="name">
@@ -70,7 +70,7 @@
         
         
                     <mat-cell *matCellDef="let task; let i=index;">
-                      <button  mat-icon-button color="primary" matTooltip="End" placement="bottom" hide-delay="0" (click)="deleteTask(task)">
+                      <button  mat-icon-button color="primary" matTooltip="Terminé" placement="bottom" hide-delay="0" (click)="endTask(task)">
                         <mat-icon>chevron_right</mat-icon>
                       </button>
                     </mat-cell>
@@ -84,7 +84,7 @@
                 <!-- Task Close We Remove That -->
 
         <mat-tab label="Terminé">
-            <table mat-table [dataSource]="dataSource.data" class="mat-elevation-z8">
+            <table mat-table [dataSource]="taskCompleted" class="mat-elevation-z8">
 
 
                 <ng-container matColumnDef="name">

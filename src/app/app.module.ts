@@ -15,6 +15,7 @@ import { CreateTaskComponent } from './crud-task/create-task/create-task.compone
 import { UpdateTaskComponent } from './crud-task/update-task/update-task.component';
 import { DeleteTaskComponent } from './crud-task/delete-task/delete-task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StatTaskComponent } from './stat-task/stat-task.component';
 
 
 
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CreateTaskComponent,
     UpdateTaskComponent,
     DeleteTaskComponent,
+    StatTaskComponent,
   ],
   imports: [
     BrowserModule,

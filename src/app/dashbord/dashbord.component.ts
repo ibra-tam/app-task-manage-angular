@@ -19,10 +19,11 @@ import { MatDialog } from '@angular/material/dialog';
 export class DashbordComponent implements OnInit {
 
     public onGetAllTask!: Subscription;
-
     public displayedColumns = ['name', 'description', 'action'];
-
     public dataSource = new MatTableDataSource<ITask>();
+    public taskPlanned!: ITask[];
+    public taskInProgress!: ITask[];
+    public taskCompleted!: ITask[];
 
 
   constructor(private taskService: TaskService, private dialog: MatDialog) { }
@@ -32,7 +33,7 @@ export class DashbordComponent implements OnInit {
     this.onGetAllTask = this.taskService.taskSubject.subscribe({
       next: (task) => {
         this.dataSource.data = task;
-        console.log('task data',this.dataSource.data);
+        this.getTaskbyStatus(task);
       },
          error: (console.error)
       });
@@ -69,6 +70,22 @@ export class DashbordComponent implements OnInit {
     this.dialog.afterAllClosed.subscribe((data) => 
     this.taskService.getAllTask());
   }
+
+  getTaskbyStatus(task: ITask[]) {
+    if (task) {
+    this.taskPlanned = task.filter((task) => task.status === 0);
+    this.taskInProgress = task.filter((task) => task.status === 1);
+    this.taskCompleted = task.filter((task) => task.status === 2);
+  }
+}
+
+endTask(task: ITask) {
+  task.status = 2;
+  this.taskService.editTask(task, task.id).then((task) => {
+  }, (error: any) => {
+    console.log(error);
+  });
+}
 
 
 }

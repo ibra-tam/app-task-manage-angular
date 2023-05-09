@@ -24,16 +24,15 @@ export class CreateTaskComponent implements OnInit {
     this.createTask = new FormGroup({
       name: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
-      status: new FormControl(
-        { value: 'Pannifiée', disabled: true },
-        Validators.required
-      ),
+      status: new FormControl('Plannifier' , Validators.required),
+      
     });
   }
 
 
     createNewTask() : void{
       this.dialog.closeAll();
+      this.createTask.value.status = 0;
       this.taskService.createTask(this.createTask.value).then(task => {(task)
       }, (error: any) => {
         console.log(error);

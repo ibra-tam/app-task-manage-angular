@@ -12,9 +12,9 @@ export class UpdateTaskComponent implements OnInit {
 
   public updateTask! : FormGroup;
   public status = [
-    { value: 1, viewValue: 'Pannifier' },
-    { value: 2, viewValue: 'En cours' },
-    { value: 3, viewValue: 'Terminer' },
+    { value: 0, viewValue: 'Pannifier' },
+    { value: 1, viewValue: 'En cours' },
+    { value: 2, viewValue: 'Terminer' },
   ];
 
   constructor( public dialogRef: MatDialogRef<UpdateTaskComponent>,
