@@ -1,0 +1,52 @@
+
+{
+    "BUTTONS": {
+        "SHOW": "Voir Statistiques",
+        "SAVE": "Enrégistrer",
+        "EDIT": "Éditer",
+        "DELETE": "Supprimer",
+        "BACK": " Retour à la liste des tâches",
+        "CANCEL": "Annuler"
+      },
+
+      "AUTHENTIFICATION": {
+        "LOGIN": "Connexion",
+        "LOGOUT": "Déconnexion",
+        "TO_LOGIN": "Se connecter",
+        "USERNAME": "Nom d'utilisateur",
+        "PASSWORD": "Mot de passe",
+        "EMAIL": "Email",
+        "REGISTER": "S'inscrire",
+        "REGISTERING": "Inscription",
+        "FORGOT_PASSWORD": "Mot de passe oublié ?",
+        "RESET_PASSWORD": "Réinitialiser le mot de passe",
+        "NEW_PASSWORD": "Nouveau mot de passe"
+      },
+
+      "TASKS": {
+        "TITLE": "Tâches",
+        "ADD": "Ajouter une tâche",
+        "EDIT": "Éditer une tâche",
+        "DELETE": "Supprimer une tâche",
+        "NAME": "Nom",
+        "DESCRIPTION": "Description",
+        "STATUS": "Statut",
+        "CREATED_AT": "Créé le",
+        "UPDATED_AT": "Mis à jour le",
+        "STATUSES": {
+          "PLANNED": "Planifié",
+          "IN_PROGRESS": "En cours",
+          "DONE": "Terminé"
+        }
+      },
+
+      "TASKS_STATISTICS": {
+        "TITLE": "Statistiques des tâches",
+        "TOTAL": "Total",
+        "TASKSPLANIFIED": "Tâches planifiées",
+        "TASKSINPROGRESS": "Tâches en cours",
+        "TASKSDONE": "Tâches terminées",
+        "TASKS": "Tâches"
+      }
+
+}

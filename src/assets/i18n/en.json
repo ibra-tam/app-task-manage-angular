@@ -1,0 +1,47 @@
+{
+    "BUTTONS": {
+        "SHOW": "Show Statistics",
+        "SAVE": "Save",
+        "EDIT": "Edit",
+        "DELETE": "Delete",
+        "BACK": "Back to task list",
+        "CANCEL": "Cancel"
+    },
+    "AUTHENTIFICATION": {
+        "LOGIN": "Login",
+        "TO_LOGIN": "Logging in",
+        "LOGOUT": "Logout",
+        "USERNAME": "Username",
+        "PASSWORD": "Password",
+        "EMAIL": "Email",
+        "REGISTER": "Register",
+        "REGISTERING": "Registering",
+        "FORGOT_PASSWORD": "Forgot Password?",
+        "RESET_PASSWORD": "Reset Password",
+        "NEW_PASSWORD": "New Password"
+    },
+    "TASKS": {
+        "TITLE": "Tasks",
+        "ADD": "Add Task",
+        "EDIT": "Edit Task",
+        "DELETE": "Delete Task",
+        "NAME": "Name",
+        "DESCRIPTION": "Description",
+        "STATUS": "Status",
+        "CREATED_AT": "Created at",
+        "UPDATED_AT": "Updated at",
+        "STATUSES": {
+            "PLANNED": "Planned",
+            "IN_PROGRESS": "In progress",
+            "DONE": "Done"
+        }
+    },
+    "TASKS_STATISTICS": {
+        "TITLE": "Tasks Statistics",
+        "TOTAL": "Total",
+        "TASKSPLANIFIED": "Tasks planned",
+        "TASKSINPROGRESS": "Tasks in progress",
+        "TASKSDONE": "Tasks done",
+        "TASKS": "Tasks"
+    }
+}

@@ -5,9 +5,13 @@
       <a class="p-2" routerLink="/shop" routerLinkActive="active"></a>
     </nav>
     <div class="d-flex align-items-center">
+      <select class="custom-slect" [(ngModel)]="currentLanguage" (ngModelChange)="switchLanguage()">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+      </select>
       <ng-container *ngIf="!currentUser">
-        <a routerLink="/account/login" class="btn btn-outline-secondary mr-4 button-customer">Connexion</a>
-        <a routerLink="/account/register" class="btn btn-outline-secondary mr2 button-customer">Inscription</a>
+        <a routerLink="/account/login" class="btn btn-outline-secondary mr-4 button-customer"> {{ 'AUTHENTIFICATION.LOGIN' | translate }}</a>
+        <a routerLink="/account/register" class="btn btn-outline-secondary mr2 button-customer"> {{ 'AUTHENTIFICATION.REGISTERING' | translate }}</a>
       </ng-container>
   
       <ng-container *ngIf="currentUser">
@@ -18,8 +22,6 @@
           <mat-icon>exit_to_app</mat-icon>
         </button>
       </ng-container>
-      
-  
     </div>
     
   </div>

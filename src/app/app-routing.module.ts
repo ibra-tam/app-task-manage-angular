@@ -5,6 +5,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { AuthGuardGuard } from './authorizations/auth-guard.guard';
 import { StatTaskComponent } from './stat-task/stat-task.component';
 
+
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'dashboard', component: DashbordComponent,

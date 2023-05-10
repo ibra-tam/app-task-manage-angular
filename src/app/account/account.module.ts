@@ -5,6 +5,7 @@ import { AccountRoutingModule } from './account-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RegisterComponent } from './register/register.component';
     CommonModule,
     AccountRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ]
 })
 

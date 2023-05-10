@@ -2,19 +2,19 @@
 <div class="container-fluid  mt-5 login">
     <div class="row login-form-signin"> 
         <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
-          <h1 class="h3 mb-3 fw-normal"> C O N N E X I O N</h1>
+          <h1 class="h3 mb-3 fw-normal"> {{ 'AUTHENTIFICATION.LOGIN' | translate }}</h1>
           <div class="col-sm-6">
             <label for="floatingInput">Email</label>
             <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="ibra@mt.com">
           
           </div>
           <div class="col-sm-6 mt-2">
-            <label for="floatingPassword">Password</label>
+            <label for="floatingPassword"> {{ 'AUTHENTIFICATION.PASSWORD' | translate }}</label>
             <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="mot de passe">   
               <i class="fa-solid fa-lock"></i>
           </div>
 
-          <button class="btn btn-success mt-2 button-customer" type="submit">Se connecter</button>
+          <button class="btn btn-success mt-2 button-customer" type="submit"> {{ 'AUTHENTIFICATION.TO_LOGIN' | translate }}</button>
         </form>
     </div>
 </div>

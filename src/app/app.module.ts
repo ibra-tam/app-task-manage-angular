@@ -14,11 +14,17 @@ import { MaterialModule } from './material.module';
 import { CreateTaskComponent } from './crud-task/create-task/create-task.component';
 import { UpdateTaskComponent } from './crud-task/update-task/update-task.component';
 import { DeleteTaskComponent } from './crud-task/delete-task/delete-task.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatTaskComponent } from './stat-task/stat-task.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,10 +41,20 @@ import { StatTaskComponent } from './stat-task/stat-task.component';
     AngularFireModule.initializeApp(environment.fireConfig),
     AngularFireDatabaseModule,
     MaterialModule,
-    //AngularFireDatabase,
+    FormsModule,
     AngularFireAuthModule,
+    HttpClientModule ,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'fr',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
