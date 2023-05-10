@@ -20,7 +20,8 @@
         "REGISTERING": "Inscription",
         "FORGOT_PASSWORD": "Mot de passe oublié ?",
         "RESET_PASSWORD": "Réinitialiser le mot de passe",
-        "NEW_PASSWORD": "Nouveau mot de passe"
+        "NEW_PASSWORD": "Nouveau mot de passe",
+        "CONFIRM_PASSWORD": "Confirmer le mot de passe"
       },
 
       "TASKS": {

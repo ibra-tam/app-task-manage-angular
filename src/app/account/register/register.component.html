@@ -1,7 +1,7 @@
 <div class="container ">
     <div class="register-form">
        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-              <h1 class="h3 mb-3 fw-normal">I N S C R I P T I O N</h1>
+              <h1 class="h3 mb-3 fw-normal"> {{ 'AUTHENTIFICATION.REGISTERING' | translate }}</h1>
               <div class="row ">
                 <div class="col-sm-6">
                   <label for="floatingInput"> Pseudo</label>
@@ -17,17 +17,17 @@
 
               <div class="row">
                   <div class="col-sm-6 mt-4">
-                    <label for="floatingPassword">Mot de passe</label>
+                    <label for="floatingPassword"> {{ 'AUTHENTIFICATION.PASSWORD' | translate }}</label>
                     <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
                     
                   </div>
 
                   <div class="col-sm-6 mt-4">
-                    <label for="floatingPassword">Confirmer le mot de passe</label>
+                    <label for="floatingPassword"> {{ 'AUTHENTIFICATION.CONFIRM_PASSWORD' | translate }}</label>
                     <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
                   </div>
               </div>
-                <button class="btn btn-primary button-customer mt-2" type="submit">S'Inscription</button>
+                <button class="btn btn-primary button-customer mt-2" type="submit"> {{ 'AUTHENTIFICATION.REGISTER' | translate }}</button>
             </form>  
 
     </div>

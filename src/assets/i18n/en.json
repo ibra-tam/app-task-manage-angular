@@ -18,7 +18,8 @@
         "REGISTERING": "Registering",
         "FORGOT_PASSWORD": "Forgot Password?",
         "RESET_PASSWORD": "Reset Password",
-        "NEW_PASSWORD": "New Password"
+        "NEW_PASSWORD": "New Password",
+        "CONFIRM_PASSWORD": "Confirm Password"
     },
     "TASKS": {
         "TITLE": "Tasks",
