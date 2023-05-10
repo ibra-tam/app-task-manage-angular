@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { TaskService } from '../services/task.service';
 import { ITask } from '../models/task';
 import { Chart, registerables } from 'chart.js';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-stat-task',
@@ -22,7 +23,10 @@ export class StatTaskComponent implements OnInit, AfterViewInit {
 
 
 
-  constructor(private taskService: TaskService) {
+  constructor(private taskService: TaskService,
+    private translateService: TranslateService
+    
+    ) {
     Chart.register(...registerables);
     this.htmlElementOfTask = 'taskChart';
    }
